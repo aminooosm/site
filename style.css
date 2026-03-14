@@ -1,0 +1,141 @@
+/* ==== Фон и общие стили ==== */
+body {
+    margin: 0;
+    font-family: 'Amiri', serif;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+
+    /* Фоновое фото мечети */
+    background-image: url('https://i.pinimg.com/736x/00/27/49/002749434e0b817b4999765ef0aa27b5.jpg');
+    background-repeat: no-repeat;         /* не повторяем */
+    background-position: center top;       /* слегка сверху */
+    background-attachment: fixed;          /* фон фиксированный при скролле */
+    /* Фон покрывает весь экран, сохраняет пропорции */
+    background-size: cover;
+
+    /* Фон полностью помещается в экран, могут появиться пустые края */
+    background-size: contain;
+
+    /* Указываем точные размеры, например 120% ширины */
+    background-size: 100% 100%;
+
+    position: relative;
+}
+
+/* Затемнение для читаемости текста */
+body::before {
+    content: '';
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.25); /* легкое затемнение */
+    z-index: -1;
+}
+
+header {
+    padding: 120px 20px 60px;
+}
+
+.ramadan {
+    font-family: 'Great Vibes';
+    font-size: 90px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.subtitle {
+    font-size: 22px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+.invite {
+    padding: 60px 20px;
+    font-size: 26px;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.card {
+    background: rgba(255,255,255,0.2);
+    padding: 30px;
+    border-radius: 20px;
+    width: 250px;
+    backdrop-filter: blur(10px);
+}
+
+.mapBtn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    background: white;
+    color: #d63384;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.timerSection {
+    padding: 80px 20px;
+}
+
+#timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#timer div {
+    background: white;
+    color: #d63384;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100px;
+}
+
+#timer span {
+    font-size: 32px;
+    font-family: 'Playfair Display';
+}
+
+.hadith {
+    padding: 80px 20px;
+    font-size: 22px;
+    font-style: italic;
+    max-width: 600px;
+    margin: auto;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+footer {
+    padding: 60px;
+    font-size: 22px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+/* ==== Передний план — мечеть ==== */
+.mosque {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.mosque img.mosquePhoto {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
